@@ -7,7 +7,7 @@ onmessage = async (e) => {
   try {
     funcs[lead](args)
   } catch (e) {
-    console.log('dude, didnt work')
+    postMessage({ error: 'Command not found' })
   }
 }
 
@@ -15,6 +15,7 @@ onmessage = async (e) => {
 *  @func:    promarseCommands
 *  @desc:    Pull command from data and parse arguments
 *  @params:  e <Object> - e.data holds the data we need
+*  @return:  [lead, args] - array containing the lead command and arguments
 */
 const parseCommands = (e) => {
   const command = e.data.split(' ')
@@ -24,8 +25,8 @@ const parseCommands = (e) => {
 }
 
 /**
- *  List of possible commands
- *  @desc: first word in command must match one of these keys
+ *  @desc:  List of possible commands
+ *  @note:  first word in command must match one of these keys
  */
 const funcs = {
   'space':    args => goToSpace(args),
