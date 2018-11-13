@@ -1,0 +1,33 @@
+{
+  "name": "peterbot.ai",
+  "version": "1.0.0",
+  "description": "An AI bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e html,js,css src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/peterb0yd/PeterBot.ai.git"
+  },
+  "keywords": [
+    "AI",
+    "ML",
+    "node",
+    "Peter",
+    "Boyd",
+    "Peter",
+    "Bot"
+  ],
+  "author": "Peter Boyd <peter@toprocklabs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterb0yd/PeterBot.ai/issues"
+  },
+  "homepage": "https://github.com/peterb0yd/PeterBot.ai#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "path": "^0.12.7"
+  }
+}
